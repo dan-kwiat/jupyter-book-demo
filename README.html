@@ -382,7 +382,8 @@ contain:</p>
 <h2>Building for the web<a class="headerlink" href="#building-for-the-web" title="Permalink to this headline">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> command spits out HTML to render your files in a web
 browser, including a sidebar navigation of the pages and some other nice things.
-It puts the HTML (and CSS, images etc) in a <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> directory.</p>
+It puts the HTML (and CSS, images etc) in a <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> directory. There will
+be a file called <code class="docutils literal notranslate"><span class="pre">index.html</span></code> which is the homepage.</p>
 <p>The command can also build a PDF of your content.</p>
 </section>
 <section id="deploying">
@@ -390,9 +391,11 @@ It puts the HTML (and CSS, images etc) in a <code class="docutils literal notran
 <p>Let’s assume you have a repository where the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch is just a Jupyter
 Book i.e. a collection of files along with a YAML config and table of contents.</p>
 <p>To deploy to a GitHub pages site, all you need to do is push the contents of the
-<code class="docutils literal notranslate"><span class="pre">_build/html</span></code> directory to your <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch of your repo. There will be a
-file called <code class="docutils literal notranslate"><span class="pre">index.html</span></code> which is the hompage. Your <a class="reference external" href="http://github.io">github.io</a> site will mirror
-whatever is in this branch.</p>
+<code class="docutils literal notranslate"><span class="pre">_build/html</span></code> directory to a branch named <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> on your repo.</p>
+<p>From the repository on GitHub, click on
+<code class="docutils literal notranslate"><span class="pre">Settings</span> <span class="pre">&gt;</span> <span class="pre">Pages</span> <span class="pre">&gt;</span> <span class="pre">Build</span> <span class="pre">and</span> <span class="pre">deployment</span></code> then select <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">from</span> <span class="pre">a</span> <span class="pre">branch</span></code>,
+choose the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch and save the changes. Now your <a class="reference external" href="http://github.io">github.io</a> site will
+mirror whatever is in this branch.</p>
 </section>
 <section id="automating-the-build-deploy">
 <h2>Automating the build + deploy<a class="headerlink" href="#automating-the-build-deploy" title="Permalink to this headline">#</a></h2>
@@ -443,6 +446,8 @@ it <code class="docutils literal notranslate"><span class="pre">book.yml</span><
 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch. From the repository on GitHub, click on
 <code class="docutils literal notranslate"><span class="pre">Settings</span> <span class="pre">&gt;</span> <span class="pre">Actions</span> <span class="pre">&gt;</span> <span class="pre">General</span> <span class="pre">&gt;</span> <span class="pre">Workflow</span> <span class="pre">permissions</span></code> then select the option
 <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">permissions</span></code> and save the changes.</p>
+<p><em>Remember to tell GitHub to deploy from this branch. See instructions above in
+<a class="reference external" href="#deploying">Deploying</a></em></p>
 <p>That’s it! Now any time you push changes to to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch, GitHub will
 automatically convert your content into HTML, push the results to <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> and
 deploy to <code class="docutils literal notranslate"><span class="pre">your-username.github.io/your-repo-name</span></code>.</p>

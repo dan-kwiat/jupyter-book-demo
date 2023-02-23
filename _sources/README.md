@@ -20,7 +20,8 @@ https://jupyterbook.org/en/stable/start/create.html#anatomy-of-a-book
 
 The `jupyter-book build` command spits out HTML to render your files in a web
 browser, including a sidebar navigation of the pages and some other nice things.
-It puts the HTML (and CSS, images etc) in a `_build/html` directory.
+It puts the HTML (and CSS, images etc) in a `_build/html` directory. There will
+be a file called `index.html` which is the homepage.
 
 The command can also build a PDF of your content.
 
@@ -30,9 +31,12 @@ Let's assume you have a repository where the `main` branch is just a Jupyter
 Book i.e. a collection of files along with a YAML config and table of contents.
 
 To deploy to a GitHub pages site, all you need to do is push the contents of the
-`_build/html` directory to your `gh-pages` branch of your repo. There will be a
-file called `index.html` which is the hompage. Your github.io site will mirror
-whatever is in this branch.
+`_build/html` directory to a branch named `gh-pages` on your repo.
+
+From the repository on GitHub, click on
+`Settings > Pages > Build and deployment` then select `Deploy from a branch`,
+choose the `gh-pages` branch and save the changes. Now your github.io site will
+mirror whatever is in this branch.
 
 ## Automating the build + deploy
 
@@ -86,6 +90,9 @@ One more thing: you must ensure the workflow has permission to update your
 `gh-pages` branch. From the repository on GitHub, click on
 `Settings > Actions > General > Workflow permissions` then select the option
 `Read and write permissions` and save the changes.
+
+_Remember to tell GitHub to deploy from this branch. See instructions above in
+[Deploying](#deploying)_
 
 That's it! Now any time you push changes to to the `main` branch, GitHub will
 automatically convert your content into HTML, push the results to `gh-pages` and
