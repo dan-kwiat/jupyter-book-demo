@@ -11,6 +11,7 @@ contain:
 - A configuration file `_config.yml`
 - A table of contents file `_toc.yml`
 - Your book's content (e.g. `.md` and `.ipynb` files)
+- A `requirements.txt` file containing `jupyter-book`
 
 See more here:
 https://jupyterbook.org/en/stable/start/create.html#anatomy-of-a-book
@@ -84,7 +85,7 @@ jobs:
 One more thing: you must ensure the workflow has permission to update your
 `gh-pages` branch. From the repository on GitHub, click on
 `Settings > Actions > General > Workflow permissions` then select the option
-`Read and write permissions`.
+`Read and write permissions` and save the changes.
 
 That's it! Now any time you push changes to to the `main` branch, GitHub will
 automatically convert your content into HTML, push the results to `gh-pages` and
