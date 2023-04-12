@@ -30,13 +30,18 @@ The command can also build a PDF of your content.
 Let's assume you have a repository where the `main` branch is just a Jupyter
 Book i.e. a collection of files along with a YAML config and table of contents.
 
-To deploy to a GitHub pages site, all you need to do is push the contents of the
-`_build/html` directory to a branch named `gh-pages` on your repo.
+To deploy to a GitHub Pages site:
 
-From the repository on GitHub, click on
-`Settings > Pages > Build and deployment` then select `Deploy from a branch`,
-choose the `gh-pages` branch and save the changes. Now your github.io site will
-mirror whatever is in this branch.
+1. Create a new branch `gh-pages` on GitHub
+2. Push the contents of `_build/html` to the `gh-pages` branch
+3. From the repository on GitHub, click
+   `Settings > Pages > Build and deployment` then select `Deploy from a branch`,
+   choose `gh-pages` and save the changes.
+
+> For free accounts, your repo needs to be public for GitHub Pages to work.
+
+Now the domain `your-username.github.io/your-repo-name` will mirror the contents
+of the `gh-pages` branch.
 
 ## Automating the build + deploy
 
