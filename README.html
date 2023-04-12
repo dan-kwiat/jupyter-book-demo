@@ -385,12 +385,19 @@ be a file called <code class="docutils literal notranslate"><span class="pre">in
 <h2>Deploying<a class="headerlink" href="#deploying" title="Permalink to this heading">#</a></h2>
 <p>Let’s assume you have a repository where the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch is just a Jupyter
 Book i.e. a collection of files along with a YAML config and table of contents.</p>
-<p>To deploy to a GitHub pages site, all you need to do is push the contents of the
-<code class="docutils literal notranslate"><span class="pre">_build/html</span></code> directory to a branch named <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> on your repo.</p>
-<p>From the repository on GitHub, click on
+<p>To deploy to a GitHub Pages site:</p>
+<ol class="arabic simple">
+<li><p>Create a new branch <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> on GitHub</p></li>
+<li><p>Push the contents of <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch</p></li>
+<li><p>From the repository on GitHub, click
 <code class="docutils literal notranslate"><span class="pre">Settings</span> <span class="pre">&gt;</span> <span class="pre">Pages</span> <span class="pre">&gt;</span> <span class="pre">Build</span> <span class="pre">and</span> <span class="pre">deployment</span></code> then select <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">from</span> <span class="pre">a</span> <span class="pre">branch</span></code>,
-choose the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch and save the changes. Now your <a class="reference external" href="http://github.io">github.io</a> site will
-mirror whatever is in this branch.</p>
+choose <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> and save the changes.</p></li>
+</ol>
+<blockquote>
+<div><p>For free accounts, your repo needs to be public for GitHub Pages to work.</p>
+</div></blockquote>
+<p>Now the domain <code class="docutils literal notranslate"><span class="pre">your-username.github.io/your-repo-name</span></code> will mirror the contents
+of the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch.</p>
 </section>
 <section id="automating-the-build-deploy">
 <h2>Automating the build + deploy<a class="headerlink" href="#automating-the-build-deploy" title="Permalink to this heading">#</a></h2>
